@@ -17,8 +17,9 @@ export const EditCard = () => {
         const editTheCard = e => {
             e.preventDefault();
         const updatedCard = { 
+title: e.target.title.value,
             description: e.target.description.value,
-            complete: e.target.complete.checked
+            image: e.target.img.value
         };
         editCard(id, updatedCard);
         nav(`/${id}`);
