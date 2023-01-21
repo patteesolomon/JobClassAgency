@@ -34,10 +34,14 @@ const CardStyle = styled.a`
                 {/* conditional rendering? */}
                 {/* this conditional heirarchy order is important */}
                 {/*conditional styles*/}
-                
-            
+
             {todoList.map((card) =>{
-              <div className='cardStl'>`/${card.title}`<div/>
+            <div className="cardPic">
+            <img src=`/${card.img}`>
+<div className='cardStl'>`/${card.title}`</div>
+<div className='cardStl'>`/${card.description}`</div>
+            </div>
+              
             })
             </ul>
             <Create/>  
