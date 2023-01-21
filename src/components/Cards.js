@@ -37,8 +37,8 @@ const CardStyle = styled.a`
                 
             
             {todoList.map((card) =>{
-              
-            })}
+              <div className='cardStl'>`/${card.title}`<div/>
+            })
             </ul>
             <Create/>  
         </div>
