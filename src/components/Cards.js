@@ -41,7 +41,6 @@ const CardStyle = styled.a`
 <div className='cardStl'>`/${card.title}`</div>
 <div className='cardStl'>`/${card.description}`</div>
             </div>
-              
             })
             </ul>
             <Create/>  
