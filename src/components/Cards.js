@@ -1,65 +1,43 @@
-import Create from "./CreateTodo";
+import Create from "./CreateCard";
 //connecting our data. js 
-import{ getTodos, deleteTodo } from "../services/todos-api";
+import{ getCards, delete } from "../services/todos-api";
 import { useState , useEffect } from 'react';
 import styled from "styled-components";
 
-export default function Todos() {
-    const [todoList, setToDoList] = useState([]);
+export default function Cards() {
+    const [cardList, setCardList] = useState([]);
 
     const URL = 'http://localhost:3001/'; 
     const data = fetch(URL);
     useEffect(() =>{
-        getTodos() // calling the function to get the data
-        .then(res => setToDoList(res.data)); // settting state
+        getCards() // calling the function to get the data
+        .then(res => setCardList(res.data)); // settting state
     //getAllTodos();
 }, []);
 
-const TodoStyle = styled.a`
+const CardStyle = styled.a`
     font-size: 1.5em;
     width: 2in;
 `;
 
-    console.log(todoList);
+    console.log(cardList);
     //setToDoList(data); // spit the data retrieved
-    const deleteTheTodo = (id) =>
+    const deleteTheCard = (id) =>
     {
       // delete function goes here
-        deleteTodo(id);
+        deleteCard(id);
     };
     return (
         <div> 
-            All of the Todos
+           Jobs Selected
             <ul>
-                {/* conditional rendering */}
+                {/* conditional rendering? */}
                 {/* this conditional heirarchy order is important */}
                 {/*conditional styles*/}
                 
             
-            {todoList.map((todo) =>{
-                if(todo.complete === true){
-                    return (
-                        deleteTheTodo(`/${todo._id}`) 
-                    )
-                }
-                else if (todo.description == String().length){
-                    return(
-                        <TodoStyle>
-                            <li>
-                                <a href={`/${todo._id}`}>{'no description'}</a>
-                            </li>
-                        </TodoStyle>
-                    )
-                }
-                else{
-                    return(
-                        <TodoStyle>
-                            <li>
-                                <a href={`/${todo._id}`}>{todo.description}</a>
-                            </li>
-                        </TodoStyle>
-                    )
-                }
+            {todoList.map((card) =>{
+              
             })}
             </ul>
             <Create/>  
