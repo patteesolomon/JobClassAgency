@@ -1,6 +1,6 @@
-import Create from "./CreateCard";
+// import Create from "./CreateCard";
 //connecting our data. js 
-import{ getCards, delete } from "../services/todos-api";
+import{ getCards, deleteCard } from "../services/card-api";
 import { useState , useEffect } from 'react';
 import styled from "styled-components";
 
@@ -15,35 +15,33 @@ export default function Cards() {
     //getAllTodos();
 }, []);
 
-const CardStyle = styled.a`
+const CardStl = styled.a`
     font-size: 1.5em;
     width: 2in;
 `;
 
     console.log(cardList);
     //setToDoList(data); // spit the data retrieved
-    const deleteTheCard = (id) =>
-    {
-      // delete function goes here
-        deleteCard(id);
-    };
+    // const deleteTheCard = (id) =>
+    // {
+    //   // delete function goes here
+    //     deleteCard(id);
+    // };
     return (
         <div> 
-           Jobs Selected
-            <ul>
+            Jobs Selected
                 {/* conditional rendering? */}
                 {/* this conditional heirarchy order is important */}
                 {/*conditional styles*/}
-
-            {todoList.map((card) =>{
+                {/* {todoList.map((card) =>{
             <div className="cardPic">
-            <img src=`/${card.img}`>
-<div className='cardStl'>`/${card.title}`</div>
-<div className='cardStl'>`/${card.description}`</div>
+            <img src={`/${card.img}`}/>
+<div>{`/${card.title}`}</div>
+<div>{`/${card.description}`}</div>
             </div>
-            })
-            </ul>
-            <Create/>  
+            }) */}
+            
+            {/* <Create/>   */}
         </div>
     )
 }

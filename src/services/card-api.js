@@ -27,15 +27,15 @@ export const editCard = (id, updatedCard) => {
     return response;
 };
 
-export const createCard = (card) => {
-    const URL = baseURL;
-    const picGrab = axios.post('https://api.pexels.com/v1/' +
-    `${card.title}`);
-    card.img = picGrab;
-    const response = axios.post(URL, card);
+// export const createCard = (card) => {
+//     const URL = baseURL;
+//     const picGrab = axios.post('https://api.pexels.com/v1/' +
+//     `${card.title}`);
+//     card.img = picGrab;
+//     const response = axios.post(URL, card);
     
-    return response;
-};
+//     return response;
+// };
 
 export const deleteCard = (id) =>
 {

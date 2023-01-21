@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { editCard , getCard } from "../services/cards-api";
+import { editCard , getCard } from "../services/card-api";
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
