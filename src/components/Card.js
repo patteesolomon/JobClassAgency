@@ -14,11 +14,11 @@ export default function Card() {
 
     const BushidoText = styled.h3`
     background-color: yellow;
-    `
+    `;
 
     const BushidoSlash = styled.h3`
     text-decoration: line-through;
-    `
+    `;
     const deleteTheCard = () =>
     {
       // delete function goes here
@@ -26,17 +26,16 @@ export default function Card() {
       deleteCard(id);
       nav('/');
     };
-    // by itself it make a grey tab
     const BushidoButton = styled.button`
-        background-color: cyan;
+        color: cyan;
     `;
 
   return (
     <div className='each'>
-      {Card.complete === true? 
+      {Card === true? 
         (<BushidoSlash>
-          <h3>description: {Card.description}</h3>
-          <h3>Completed: </h3>
+          <h3>Title: {Card.title}</h3>
+          <h3>Description: </h3>
         </BushidoSlash>) 
         : 
         (<BushidoText>
