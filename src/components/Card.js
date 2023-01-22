@@ -27,7 +27,8 @@ export default function Card() {
       deleteCard(id);
       nav('/');
     };
-    const BushidoButton = styled.text-decoration`
+    const BushidoButton =
+    styled.text-decoration`
         color: cyan;
         font-height: 11.5px;
         
