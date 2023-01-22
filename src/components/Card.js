@@ -13,7 +13,8 @@ export default function Card() {
   }, []);
 
     const BushidoText = styled.h3`
-    background-color: yellow;
+    background-color: black;
+    color: blue;
     `;
 
     const BushidoSlash = styled.h3`
@@ -26,8 +27,10 @@ export default function Card() {
       deleteCard(id);
       nav('/');
     };
-    const BushidoButton = styled.button`
+    const BushidoButton = styled.text-decoration`
         color: cyan;
+        font-height: 11.5px;
+        
     `;
 
   return (
