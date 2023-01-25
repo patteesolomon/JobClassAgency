@@ -1,7 +1,6 @@
 import { getCards } from "../services/card-api";
 import{useState, useEffect} from 'react';
-import Create from "./CreateCard";
-import { Link } from "react-router-dom";
+
 
 export default function Cards() {
     const [Cards, setCards] = useState([]);
@@ -25,21 +24,8 @@ export default function Cards() {
                 // this whole this is rushed as shit
                 // get the data going...
                 // 
+            
             );
         })
-    return(
-        <div>
-            <>
-            {Cards.map((todo) =>{
-                return (
-                    <div>
-                    <Link to={`/${todo._id}`}>{todo.description}</Link>
-                    </div>
-                    // <li><a href={`/${todo._id}`}>{todo.description}</a></li>
-                )
-            })}
-            </>
-            <Create />  
-        </div>
-    )
+        
 }

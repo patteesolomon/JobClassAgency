@@ -1,0 +1,18 @@
+How to deploy on render:
+0.5 - Create account (via GitHub or however you want)
+1. Create a Web Service
+1.5 - Connect GitHub to Render (for single repository or all repositories)
+2. Connect the Repo you want to display
+2.5 Make sure the root is '.' or '' not 'src'
+3. Change Build Command to npm install
+3.5 node server.js
+4. click Create New Web Service on the bottom of the screen
+5. click on connect drop down
+6. connect outbound and copy ip addresses
+7 - Paste IP addresses into MongoDB account Under Network Access tab to allow connections from the Render deployed service to access your MongoDB instance
+(paste each individually)
+or dont and just use the "open to all connections option"
+8 - Under Environment, goto Secret files. add one and Name it “.env” and paste in MongoDB connection string from your local .env file. => "contents" (re-edited)
+9 - if you use a baseURL from here out copy the working build rendered site url and use that one instead
+then wherever you use your server's 'cors' import and function use this => 
+app.use(cors({ origin: '*' }));
