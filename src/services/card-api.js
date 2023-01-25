@@ -4,7 +4,8 @@ import axios from "axios";
 // .then(response => response.json())
 // .then(data => console.log(data))
 // SHOW ALL 
-const baseURL = 'http://localhost:3002/card';
+const baseURL = 'https://jcacards.onrender.com';
+//const baseURL = 'http://localhost:3002/card';
 // port to our express app 
 // defining it here makes things easier
 // the slash is for everything comming from the default route
@@ -27,15 +28,11 @@ export const editCard = (id, updatedCard) => {
     return response;
 };
 
-// export const createCard = (card) => {
-//     const URL = baseURL;
-//     const picGrab = axios.post('https://api.pexels.com/v1/' +
-//     `${card.title}`);
-//     card.img = picGrab;
-//     const response = axios.post(URL, card);
-    
-//     return response;
-// };
+export const createCard = (card) => {
+    const URL = baseURL;
+    const response = axios.post(URL, card);
+    return response;
+};
 
 export const deleteCard = (id) =>
 {

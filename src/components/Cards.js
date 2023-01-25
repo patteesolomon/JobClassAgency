@@ -1,47 +1,45 @@
-// import Create from "./CreateCard";
-//connecting our data. js 
-import{ getCards, deleteCard } from "../services/card-api";
-import { useState , useEffect } from 'react';
-import styled from "styled-components";
+import { getCards } from "../services/card-api";
+import{useState, useEffect} from 'react';
+import Create from "./CreateCard";
+import { Link } from "react-router-dom";
 
 export default function Cards() {
-    const [cardList, setCardList] = useState([]);
-
-    const URL = 'http://localhost:3001/'; 
-    const data = fetch(URL);
-    useEffect(() =>{
+    const [Cards, setCards] = useState([]);
+    useEffect(() => {
         getCards() // calling the function to get the data
-        .then(res => setCardList(res.data)); // settting state
-    //getAllTodos();
-}, []);
-
-const CardStl = styled.a`
-    font-size: 1.5em;
-    width: 2in;
-`;
-
-    console.log(cardList);
-    //setToDoList(data); // spit the data retrieved
-    // const deleteTheCard = (id) =>
-    // {
-    //   // delete function goes here
-    //     deleteCard(id);
-    // };
-    return (
-        <div> 
-            Jobs Selected
-                {/* conditional rendering? */}
-                {/* this conditional heirarchy order is important */}
-                {/*conditional styles*/}
-                {/* {todoList.map((card) =>{
-            <div className="cardPic">
-            <img src={`/${card.img}`}/>
-<div>{`/${card.title}`}</div>
-<div>{`/${card.description}`}</div>
+        .then(res => setCards(res.data)); // setting state with returned data
+    }, []);
+    console.log(Cards);
+    const list = Cards.Search.map(it => {
+        return (
+            <div key={it.title}>
+            <p>{it.description}</p>
+            <img src={it.Image} alt=''/>
+            <p>{it.requirement}</p>
+            <p>{it.SATISFACTION}</p>
+            <p>{it.SG}</p>
+            <p>{it.SALARY}</p>
+            <p>{it.SV}</p>
+            <p>{it.titleII}</p>
             </div>
-            }) */}
-            
-            {/* <Create/>   */}
+                // this whole this is rushed as shit
+                // get the data going...
+                // 
+            );
+        })
+    return(
+        <div>
+            <>
+            {Cards.map((todo) =>{
+                return (
+                    <div>
+                    <Link to={`/${todo._id}`}>{todo.description}</Link>
+                    </div>
+                    // <li><a href={`/${todo._id}`}>{todo.description}</a></li>
+                )
+            })}
+            </>
+            <Create />  
         </div>
     )
 }
