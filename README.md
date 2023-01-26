@@ -10,6 +10,11 @@ https://github.com/patteesolomon/jcaCardBackEnd.git
 https://github.com/patteesolomon/JobClassAgency.git
 https://github.com/patteesolomon/JcaBackend.git
 
+-Render Sites
+https://jobclassagency.onrender.com
+https://jcacards.onrender.com
+https://jcausersbackend.onrender.com
+
 "Project Requirements"
 https://github.com/patteesolomon/JobClassAgency/blob/main/docs/requirements.md
 
