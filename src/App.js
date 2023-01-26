@@ -101,7 +101,7 @@ return (
         Job Class Agency App 
         <Router>
           <Routes> 
-            <Route path="/" element={<Form cardsearch={callCards}></Form>}/>
+            <Route path="/" element={<Form cardSearch={callCards}></Form>}/>
             <Route path='/:id' element={<Form callCard ={callCard}/>}/>
             <Route path='/:id/edit' element={<EditCard/>}/>
             <Route path="/:id/create" element={<Create/>}></Route>
