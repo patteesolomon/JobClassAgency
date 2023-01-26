@@ -1,9 +1,12 @@
 import { getCards } from "../services/card-api";
 import{useState, useEffect} from 'react';
-
+import CreateCard from "./CreateCard";
 
 export default function Cards() {
     const [Cards, setCards] = useState([]);
+    
+    const URL = `https://jcacards.onrender.com`;
+    const data = fetch(URL);
     useEffect(() => {
         getCards() // calling the function to get the data
         .then(res => setCards(res.data)); // setting state with returned data
@@ -21,11 +24,13 @@ export default function Cards() {
             <p>{it.SV}</p>
             <p>{it.titleII}</p>
             </div>
-                // this whole this is rushed as shit
-                // get the data going...
-                // 
-            
             );
-        })
-        
+        }
+    )
+    return(
+        <div>
+        {list}
+        <CreateCard/>
+            </div>
+    );
 }

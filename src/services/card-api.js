@@ -5,7 +5,6 @@ import axios from "axios";
 // .then(data => console.log(data))
 // SHOW ALL 
 const baseURL = 'https://jcacards.onrender.com';
-//const baseURL = 'http://localhost:3002/card';
 // port to our express app 
 // defining it here makes things easier
 // the slash is for everything comming from the default route
