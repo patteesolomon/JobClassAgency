@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import './App.css';
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import Form from "./components/Form";
-import Cards from './components/Cards.js';
+// import Cards from './components/Cards.js';
 import { EditCard } from './components/EditCard';
 import Create from "./components/CreateCard";
 import styled from 'styled-components';
-import { getCard } from "./services/card-api";
+import Cards from "./components/Cards";
+// import { getCard } from "./services/card-api";
 //import {exec, spawn, execSync, spawnSync} from 'child_process';
 /*
 Objectives
@@ -25,7 +26,7 @@ const CardS = styled.div`
   display: flex;
   justify-content: center;
 `
-export default function App() {
+function App() {
   
 
 const apiKey = 'v8BN36osB5u4ETQwIlPmVM6HHEN3FH2MDZYxvowc5q8qcT9VuoRjVrPJ';
@@ -66,23 +67,25 @@ const getPList = async (search, targetT, pageN) =>
 };
 
   useEffect(() => {
-    curlCall("laughter","comedy", 100);
+    curlCall("Software","Engineering", 100);
   }, []);
 
 return (
     <div className="App">
       <Background>
-        Card App 
+        Job Class Agency App 
         <Router>
           <Routes> 
-            <Route path="/" element={<CardS><Form cardsearch ={getPList()}/></CardS>}/>
-            <Route path='/:id' element={<Form cardsearch ={curlCall()}/>}/>
+            <Route path="/" element={<CardS><Form cardsearch ={curlCall()}/>
+            </CardS>}/>
+            <Route path='/:id' element={Cards}/>
             <Route path='/:id/edit' element={<EditCard/>}/>
-            <Route path="/:id/create" element={<Create></Create>}></Route>
+            <Route path="/:id/create" element={<Create/>}></Route>
           </Routes>
         </Router>
       </Background>
-      
     </div>
   );
 }
+
+export default App;

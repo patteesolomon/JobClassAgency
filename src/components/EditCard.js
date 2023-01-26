@@ -25,7 +25,7 @@ title: e.target.title.value,
         nav(`/${id}`);
     };
     const BushidoButton = styled.button`
-        background-color: lime;
+        background-color: darkgreen;
     `;
 
     return (
