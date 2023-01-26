@@ -18,11 +18,6 @@ https://jcausersbackend.onrender.com
 "Project Requirements"
 https://github.com/patteesolomon/JobClassAgency/blob/main/docs/requirements.md
 
--Render Sites
-https://jobclassagency.onrender.com
-https://jcacards.onrender.com
-https://jcausersbackend.onrender.com
-
 -Build Status
 All pages are housed on GitHub and 
 all pages are hosted on render.
