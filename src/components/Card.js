@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getCard , deleteCard } from '../services/Card-api';
+import { getCard , deleteCard } from '../services/card-api';
 import { useParams, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -33,23 +33,11 @@ export default function Card() {
 
 return (
     <div className='each'>
-        {Card.complete === true? 
-        (<BushidoSlash>
-            <h3>description: {Card.description}</h3>
-            <h3>Completed: </h3>
-        </BushidoSlash>) 
-        : 
-        (<BushidoText>
-            <h3>description: {Card.description}</h3>
-            <h3>Completed: </h3>
-        </BushidoText> )}
-        
-        {Card.complete === true? 
-        (<input type="checkbox" checked></input>) 
-        : 
-        (<input type="checkbox"></input>)}
+        <BushidoSlash>
+            <h3>description: {Card.title}</h3>
+        </BushidoSlash>
         <br/>
-        <BushidoButton><button onClick = {() => {nav(`/${id}/edit`)}}>Edit</button></BushidoButton>
+        <BushidoText><button onClick = {() => {nav(`/${id}/edit`)}}>Edit</button></BushidoText>
         <br/>
         <BushidoButton><button onClick = {deleteTheCard}>Delete</button></BushidoButton>
         <br/>

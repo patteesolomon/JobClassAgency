@@ -78,7 +78,7 @@ return (
           <Routes> 
             <Route path="/" element={<CardS><Form cardsearch ={curlCall()}/>
             </CardS>}/>
-            <Route path='/:id' element={Cards}/>
+            <Route path='/:id' element={<Cards/>}/>
             <Route path='/:id/edit' element={<EditCard/>}/>
             <Route path="/:id/create" element={<Create/>}></Route>
           </Routes>
