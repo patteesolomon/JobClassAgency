@@ -66,6 +66,8 @@ sc1 - cloning here
 sc2 - setup filebase and save it here along with the other backends listed above
 ![setting up filebase](https://user-images.githubusercontent.com/113143898/214758514-a64f08d0-cd98-48d1-86bb-437a704014be.PNG)
 
+-*then 'npm i' always remember to do that*
+
 sc3 - link up the three applications
 ![link up and check the port numbers](https://user-images.githubusercontent.com/113143898/214758817-f1082f29-5ba5-4773-bf1c-e638670d44c0.PNG)
 ![check the browser](https://user-images.githubusercontent.com/113143898/214758823-7fe1fdf4-ea03-4911-bcca-d4d1facc8319.PNG)

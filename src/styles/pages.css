@@ -1,0 +1,32 @@
+*:not(path):not(g){
+    color: rgba(18, 2, 2, 0.97);
+    background: rgba(255, 255, 255, 0.5);
+    outline : 50px 0.72rem hsla(183, 50%, 50%, 00.72rem);
+    font-size: 10px;
+    font-family: Roboto, Arial, sans-serif;
+    box-shadow:0 10px 10px rgb(30, 255, 0)rgb(30, 255, 0);
+}
+
+header::target-text{
+    box-shadow: 0 10px 10px rgb(30, 255, 0);
+}
+
+section.cards:hover {
+    display: flex;
+    align-items: center;
+}
+
+section.cards .card::content {
+    margin: 0 10px;
+}
+
+#cardGrid { grid-area: cardGrid; }
+#cardArea { grid-area: cardArea; }
+
+#grid{
+    display: grid;
+    grid-template-columns:
+    subgrid
+    "cardGrid" 
+    "cardArea";
+}

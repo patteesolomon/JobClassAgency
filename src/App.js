@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import './App.css';
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import Form from "./components/Form";
-import Card from './components/Card';
 import Cards from './components/Cards.js';
 import { EditCard } from './components/EditCard';
 import Create from "./components/CreateCard";
 import styled from 'styled-components';
+import { getCard } from "./services/card-api";
 //import {exec, spawn, execSync, spawnSync} from 'child_process';
 /*
 Objectives
@@ -15,8 +15,8 @@ How to use Styled Components
 */
 
 const Background = styled.div`
-  background-color: #051749;
-  color: palevioletred;
+  background-color: darkgreen;
+  color: palegreen;
   text-align: center;
 `
 
@@ -75,8 +75,8 @@ return (
         Card App 
         <Router>
           <Routes> 
-            <Route path="/" element={<CardS><Form cardsearch ={getPList}/></CardS>}/>
-            <Route path='/:id' element={<Card></Card>}/>
+            <Route path="/" element={<CardS><Form cardsearch ={getPList()}/></CardS>}/>
+            <Route path='/:id' element={<Form cardsearch ={curlCall()}/>}/>
             <Route path='/:id/edit' element={<EditCard/>}/>
             <Route path="/:id/create" element={<Create></Create>}></Route>
           </Routes>
