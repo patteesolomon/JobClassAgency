@@ -16,9 +16,9 @@ work on css
 
 push
 
-Day 3: Not Done
+Day 3: Not Done <= 
 
-pull 
+pull  
 
 // find a way to add an array of names for the cards
 css and structure not Done
