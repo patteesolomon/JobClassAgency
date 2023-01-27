@@ -1,11 +1,11 @@
 import { getCards } from "../services/card-api";
-import{useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import CreateCard from "./CreateCard";
 
 export default function Cards() {
     const [Cards, setCards] = useState([]);
     
-    const URL = `https://jcacards.onrender.com`;
+    const URL = `https://jcacards.onrender.com/cards`;
     const data = fetch(URL);
     useEffect(() => {
         getCards() // calling the function to get the data

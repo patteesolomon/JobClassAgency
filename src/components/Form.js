@@ -20,7 +20,7 @@ console.log(formData);
     //prevent page from refreshing on form submission
     event.preventDefault();
     //pass the search term to cardsearch prop, which is apps getcard function
-    props.cardSearch(formData.searchterm);
+    props.cardsearch(formData.searchterm);
   };
 
   //The component must return some JSX

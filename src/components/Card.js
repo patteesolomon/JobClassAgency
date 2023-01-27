@@ -5,10 +5,10 @@ import styled from 'styled-components';
 
 export default function Card() {
   const nav = useNavigate();
-  const {id} = useParams();
-  const [Card, setCard] = useState({});
+  const {_id} = useParams();
+  const [card, setCard] = useState({});
   useEffect(() => {
-    getCard(id)
+    getCard(_id)
     .then(res => setCard(res.data));
   }, []);
 
@@ -23,7 +23,7 @@ export default function Card() {
     {
       // delete function goes here
       // navigate back to the main screen
-        deleteCard(id);
+        deleteCard(_id);
         nav('/');
     };
     // by itself it make a grey tab
@@ -34,10 +34,10 @@ export default function Card() {
 return (
     <div className='each'>
         <BushidoSlash>
-            <h3>description: {Card.title}</h3>
+            <h3>Title: {card.title}</h3>
         </BushidoSlash>
         <br/>
-        <BushidoText><button onClick = {() => {nav(`/${id}/edit`)}}>Edit</button></BushidoText>
+        <BushidoText><button onClick = {() => {nav(`/${_id}/edit`)}}>Edit</button></BushidoText>
         <br/>
         <BushidoButton><button onClick = {deleteTheCard}>Delete</button></BushidoButton>
         <br/>

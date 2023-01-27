@@ -7,6 +7,7 @@ import Create from "./components/CreateCard";
 import styled from 'styled-components';
 import Cards from "./components/Cards";
 import Card from "./components/Card";
+import CardDisplay from "./components/cardDisplay";
 // import { getCard } from "./services/card-api";
 //import {exec, spawn, execSync, spawnSync} from 'child_process';
 /*
@@ -34,22 +35,13 @@ const [pic, setPic] = useState(null);
 
 const [card, setCard] = useState(null);
 
-//call the Card data
-const callCard = async (search) =>{
-  try{
-    const responce = await fetch(`https://jcacards.onrender.com/${search}`);
-    const data = await responce.json();
-    setCard(data);
-  }
-  catch(e){
-    console.error(e);
-  }
-};
+//outlet and getCard methods
 
+//call the Card data
 //call the cards
 const callCards = async (search) =>{
   try{
-    const responce = await fetch(`https://jcacards.onrender.com/${search}`);
+    const responce = await fetch(`/${search}`);
     const data = await responce.json();
     setCard(data);
   }
@@ -99,14 +91,8 @@ return (
     <div className="App">
       <Background>
         Job Class Agency App 
-        <Router>
-          <Routes> 
-            <Route path="/" element={<Form cardSearch={callCards}></Form>}/>
-            <Route path='/:id' element={<Form callCard ={callCard}/>}/>
-            <Route path='/:id/edit' element={<EditCard/>}/>
-            <Route path="/:id/create" element={<Create/>}></Route>
-          </Routes>
-        </Router>
+            <Form cardsearch ={callCards}></Form>
+            <CardDisplay card={card}></CardDisplay>
       </Background>
     </div>
   );
