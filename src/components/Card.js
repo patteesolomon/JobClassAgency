@@ -34,14 +34,14 @@ export default function Card() {
 return (
     <div className='each'>
         <BushidoSlash>
-            <h3>Title: {card.title}</h3>
+            <h3>Title: {card._id}</h3>
         </BushidoSlash>
-        <br/>
+        {/* <br/>
         <BushidoText><button onClick = {() => {nav(`/${_id}/edit`)}}>Edit</button></BushidoText>
         <br/>
         <BushidoButton><button onClick = {deleteTheCard}>Delete</button></BushidoButton>
         <br/>
-        <BushidoButton><button onClick = {() => {nav('/')}}>Main</button></BushidoButton>
+        <BushidoButton><button onClick = {() => {nav('/')}}>Main</button></BushidoButton> */}
     </div>
     )
 }

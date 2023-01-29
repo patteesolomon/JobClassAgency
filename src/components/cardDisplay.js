@@ -6,7 +6,7 @@ export default function cardDisplay ({ card }){
       return (
         <div key={it.id}>
           <p>{it.title}</p>
-          <img src={it.Image} alt=''/>
+          {/* <img src={it.Image} alt=''/> */}
         </div>
   
       );

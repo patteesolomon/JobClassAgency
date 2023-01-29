@@ -17,7 +17,7 @@ export const EditCard = () => {
         const editTheCard = e => {
             e.preventDefault();
         const updatedCard = { 
-title: e.target.title.value,
+            title: e.target.title.value,
             description: e.target.description.value,
             image: e.target.img.value
         };
