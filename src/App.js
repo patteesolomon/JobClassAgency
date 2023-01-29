@@ -91,8 +91,8 @@ return (
     <div className="App">
       <Background>
         Job Class Agency App 
-            <Form cardsearch ={callCards}></Form>
-            <CardDisplay card={card}></CardDisplay>
+        <Route path = "/">
+         </Route>
       </Background>
     </div>
   );
