@@ -92,6 +92,7 @@ return (
       <Background>
         Job Class Agency App 
         <Route path = "/">
+          <Link></Link>
          </Route>
       </Background>
     </div>
