@@ -8,6 +8,7 @@ import styled from 'styled-components';
 import Cards from "./components/Cards";
 import Card from "./components/Card";
 import CardDisplay from "./components/cardDisplay";
+import { getCards } from "./services/card-api";
 // import { getCard } from "./services/card-api";
 //import {exec, spawn, execSync, spawnSync} from 'child_process';
 /*
@@ -90,6 +91,7 @@ return (
     <div className="App">
       <Background>
         Job Class Agency App 
+        <Form cardsearch={getCards}></Form>
       </Background>
     </div>
   );
