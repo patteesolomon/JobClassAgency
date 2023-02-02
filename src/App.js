@@ -8,7 +8,7 @@ import styled from 'styled-components';
 import Cards from "./components/Cards";
 import Card from "./components/Card";
 import CardDisplay from "./components/cardDisplay";
-import { getCards } from "./services/card-api";
+import { getCard } from "./services/card-api";
 // import { getCard } from "./services/card-api";
 //import {exec, spawn, execSync, spawnSync} from 'child_process';
 /*
@@ -34,21 +34,23 @@ const apiKey = 'v8BN36osB5u4ETQwIlPmVM6HHEN3FH2MDZYxvowc5q8qcT9VuoRjVrPJ';
 
 const [pic, setPic] = useState(null);
 
-
+const [card, setCard] = useState(null);
 //outlet and getCard methods
 
 //call the Card data
 //call the cards
-// const callCards = async (search) =>{
-//   try{
-//     const responce = await fetch(`/${search}`);
-//     const data = await responce.json();
-//     setCard(data);
-//   }
-//   catch(e){
-//     console.error(e);
-//   }
-// };
+const callCard = async (search) =>{
+  try{
+    const response = await fetch(`https://jcacards.onrender.com/cards/${search}`);
+    const data = await response.json();
+    // we are real close just get the data loaded 
+    console.log(data);
+    setCard(data);
+  }
+  catch(e){
+    console.error(e);
+  }
+};
 
 //ill keep picCall because I need 
 // this thing for alot more
@@ -91,7 +93,8 @@ return (
     <div className="App">
       <Background>
         Job Class Agency App 
-        <Form cardsearch={getCards}></Form>
+        <Form cardsearch={callCard}></Form>
+        <CardDisplay card={card}></CardDisplay>
       </Background>
     </div>
   );

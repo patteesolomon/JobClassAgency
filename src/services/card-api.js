@@ -15,14 +15,14 @@ export const getCards = () =>{
     return response;
 };
 
-export const getCard = (id) => {
-    const URL = `${baseURL}/${id}`;
+export const getCard = (title) => {
+    const URL = `${baseURL}/${title}`;
     const response = axios.get(URL);
     return response;
 };
 
-export const editCard = (id, updatedCard) => {
-    const URL = `${baseURL}/${id}`;
+export const editCard = (title, updatedCard) => {
+    const URL = `${baseURL}/${title}`;
     const response = axios.put(URL, updatedCard);
     return response;
 };
@@ -33,9 +33,9 @@ export const createCard = (card) => {
     return response;
 };
 
-export const deleteCard = (id) =>
+export const deleteCard = (title) =>
 {
-    const URL = `${baseURL}/${id}`;
+    const URL = `${baseURL}/${title}`;
     const response = axios.delete(URL);
     return response;
 };
