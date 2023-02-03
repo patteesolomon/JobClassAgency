@@ -41,8 +41,8 @@ const [card, setCard] = useState(null);
 //call the cards
 const callCard = async (search) =>{
   try{
-    const response = await fetch(`https://jcacards.onrender.com/cards/${search}`);
-    const data = await response.json();
+    const response = getCard(search);
+    const data = await response;
     // we are real close just get the data loaded 
     console.log(data);
     setCard(data);
