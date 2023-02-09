@@ -5,6 +5,7 @@ import axios from "axios";
 // .then(data => console.log(data))
 // SHOW ALL 
 const baseURL = `https://jcacards.onrender.com/cards`;
+//const baseURL = `http://localhost:3002/cards`;
 // port to our express app 
 // defining it here makes things easier
 // the slash is for everything comming from the default route
@@ -15,20 +16,16 @@ export const getCards = () =>{
     return response;
 };
 
-export const getCardTitle = (search) => {
+
+
+export const getCard = (search) => {
     const URL = `${baseURL}/${search}`;
     const response = axios.get(URL);
     return response;
 };
 
-export const getCard = (_id) => {
-    const URL = `${baseURL}/${_id}`;
-    const response = axios.get(URL);
-    return response;
-};
-
-export const editCard = (_id, updatedCard) => {
-    const URL = `${baseURL}/${_id}`;
+export const editCard = (search, updatedCard) => {
+    const URL = `${baseURL}/${search}`;
     const response = axios.put(URL, updatedCard);
     return response;
 };
@@ -39,9 +36,15 @@ export const createCard = (card) => {
     return response;
 };
 
-export const deleteCard = (_id) =>
+export const deleteCard = (search) =>
 {
-    const URL = `${baseURL}/${_id}`;
+    const URL = `${baseURL}/${search}`;
     const response = axios.delete(URL);
+    return response;
+};
+
+export const getCardTitle = (search) => {
+    const URL = `${baseURL}/${search}`;
+    const response = axios.get(URL);
     return response;
 };

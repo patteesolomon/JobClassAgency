@@ -1,15 +1,12 @@
 import { useEffect, useState } from "react";
 import './App.css';
-import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+//import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import Form from "./components/Form";
-import { EditCard } from './components/EditCard';
-import Create from "./components/CreateCard";
+//import { EditCard } from './components/EditCard';
+//import Create from "./components/CreateCard";
 import styled from 'styled-components';
-import Cards from "./components/Cards";
-import Card from "./components/Card";
 import CardDisplay from "./components/cardDisplay";
 import { getCard } from "./services/card-api";
-// import { getCard } from "./services/card-api";
 //import {exec, spawn, execSync, spawnSync} from 'child_process';
 /*
 Objectives
@@ -41,7 +38,7 @@ const [card, setCard] = useState(null);
 //call the cards
 const callCard = async (search) =>{
   try{
-    const response = getCard(search);
+    const response = (await getCard(search));
     const data = await response;
     // we are real close just get the data loaded 
     console.log(data);
@@ -95,6 +92,28 @@ return (
         Job Class Agency App 
         <Form cardsearch={callCard}></Form>
         <CardDisplay card={card}></CardDisplay>
+        <div></div>
+        <footer>
+        <nav>
+          <ol>
+            <span>
+        <a href="cards">cards</a>
+          </span>
+          <span>
+        <a href="cards">Userbase</a>
+          </span>
+          <span>
+        <a href="cards">Merch</a>
+          </span>
+          <span>
+        <a href="cards">Clubs</a>
+          </span>
+          <span>
+        <a href="cards">Contact</a>
+          </span>
+          </ol>
+          </nav>
+          </footer>
       </Background>
     </div>
   );

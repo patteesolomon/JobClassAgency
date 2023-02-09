@@ -1,7 +1,6 @@
 export default function cardDisplay ({ card }){
 //data is pulled from the DOM
     const loaded = () => {
-     card.data.map => {
       return (
         <div key={card.title}>
           <p>{card.title}</p>
@@ -9,7 +8,6 @@ export default function cardDisplay ({ card }){
         </div>
   
       );
-     }
     }
     //function to return loading JSX
     const loading = () => {
