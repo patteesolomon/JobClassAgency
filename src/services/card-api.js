@@ -3,9 +3,8 @@ import axios from "axios";
 // fetch("url")
 // .then(response => response.json())
 // .then(data => console.log(data))
-// SHOW ALL 
+//`http://localhost:3002/cards`
 const baseURL = `https://jcacards.onrender.com/cards`;
-//const baseURL = `http://localhost:3002/cards`;
 // port to our express app 
 // defining it here makes things easier
 // the slash is for everything comming from the default route

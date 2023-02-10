@@ -1,13 +1,15 @@
 export default function cardDisplay ({ card }){
 //data is pulled from the DOM
     const loaded = () => {
-      return (
-        <div key={card.title}>
-          <p>{card.title}</p>
+      var e = this.props.items;
+        {e.map((item , i) => {
+          return(
+        <div key={e}>
+          {e.title}
           {/* <img src={it.Image} alt=''/> */}
         </div>
-  
-      );
+        );
+      })}
     }
     //function to return loading JSX
     const loading = () => {

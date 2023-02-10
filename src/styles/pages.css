@@ -1,6 +1,6 @@
 *:not(path):not(g){
     color: rgba(238, 254, 240, 0.97);
-    background: rgba(30, 30, 30, 0.5);
+    background: rgba(35, 35, 35, 0.738);
     outline : 50px 0.72rem hsla(183, 50%, 50%, 00.72rem);
     font-size: 10px;
     font-family: Roboto, Arial, sans-serif;

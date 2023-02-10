@@ -92,28 +92,27 @@ return (
         Job Class Agency App 
         <Form cardsearch={callCard}></Form>
         <CardDisplay card={card}></CardDisplay>
-        <div></div>
+        <div>
+          nothing here
+        </div>
+        <div className="spano">
         <footer>
         <nav>
-          <ol>
-            <span>
-        <a href="cards">cards</a>
+          <span>
+        <a href="Userbase">Userbase</a>
           </span>
           <span>
-        <a href="cards">Userbase</a>
+        <a href="Merch">Merch</a>
           </span>
           <span>
-        <a href="cards">Merch</a>
+        <a href="Clubs">Clubs</a>
           </span>
           <span>
-        <a href="cards">Clubs</a>
+        <a href="Contact">Contact</a>
           </span>
-          <span>
-        <a href="cards">Contact</a>
-          </span>
-          </ol>
           </nav>
           </footer>
+        </div>
       </Background>
     </div>
   );
