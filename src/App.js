@@ -39,7 +39,7 @@ const [card, setCard] = useState(null);
 const callCard = async (search) =>{
   try{
     const response = (await getCard(search));
-    const data = await response;
+    const data = await response.json();
     // we are real close just get the data loaded 
     console.log(data);
     setCard(data);
@@ -90,11 +90,8 @@ return (
     <div className="App">
       <Background>
         Job Class Agency App 
-        <Form cardsearch={callCard}></Form>
+        <Form cardsearch={callCard} id='cardsearch'></Form>
         <CardDisplay card={card}></CardDisplay>
-        <div>
-          nothing here
-        </div>
         <div className="spano">
         <footer>
         <nav>

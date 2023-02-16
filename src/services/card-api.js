@@ -3,7 +3,8 @@ import axios from "axios";
 // fetch("url")
 // .then(response => response.json())
 // .then(data => console.log(data))
-//`http://localhost:3002/cards`
+//
+//http://localhost:3002/cards
 const baseURL = `https://jcacards.onrender.com/cards`;
 // port to our express app 
 // defining it here makes things easier
@@ -14,8 +15,6 @@ export const getCards = () =>{
     const response = axios.get(URL);
     return response;
 };
-
-
 
 export const getCard = (search) => {
     const URL = `${baseURL}/${search}`;
