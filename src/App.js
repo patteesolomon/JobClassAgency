@@ -39,7 +39,7 @@ const [card, setCard] = useState(null);
 const callCard = async (search) =>{
   try{
     const response = (await getCard(search));
-    const data = await response.json();
+    const data = await response.data;
     // we are real close just get the data loaded 
     console.log(data);
     setCard(data);
