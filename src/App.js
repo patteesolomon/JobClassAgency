@@ -7,6 +7,7 @@ import Form from "./components/Form";
 import styled from 'styled-components';
 import CardDisplay from "./components/cardDisplay";
 import { getCard } from "./services/card-api";
+import { Link, Route, Router, Routes } from "react-router-dom";
 //import {exec, spawn, execSync, spawnSync} from 'child_process';
 /*
 Objectives
@@ -90,25 +91,37 @@ return (
     <div className="App">
       <Background>
         Job Class Agency App 
+        <nav className="YoA"><span>
+          <a href="/Account">Account</a>
+          </span>
+          </nav>
         <Form cardsearch={callCard} id='cardsearch'></Form>
         <CardDisplay card={card}></CardDisplay>
         <div className="spano">
+          <Router>
         <footer>
         <nav>
           <span>
-        <a href="Userbase">Userbase</a>
+          <Link to={`/Userbase`}>Userbase</Link>
           </span>
           <span>
-        <a href="Merch">Merch</a>
+          <Link to={`/Merch`}>Merch</Link>
           </span>
           <span>
-        <a href="Clubs">Clubs</a>
+          <Link to={`/Clubs`}>Clubs</Link>
           </span>
           <span>
-        <a href="Contact">Contact</a>
+          <Link to={`/Contact`}>Contact</Link>
           </span>
-          </nav>
+        </nav>
           </footer>
+          <Routes>
+          <Route path=':Userbase'/>
+          <Route path=':Merch'/>
+          <Route path=':Clubs'/>
+          <Route path=':Contact'/>
+          </Routes>
+          </Router>
         </div>
       </Background>
     </div>
