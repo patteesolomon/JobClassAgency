@@ -12,11 +12,9 @@ import {Clubs} from "./views/Clubs";
 import {Contact} from "./views/Contact";
 import {Userbase} from "./views/Userbase";
 import {Merch} from "./views/Merch";
-//import {exec, spawn, execSync, spawnSync} from 'child_process';
 /*
 Objectives
 How to use Styled Components
-
 */
 const Background = styled.div`
   background-color: darkgreen;
@@ -94,17 +92,27 @@ return (
     <div className="App">
       <Background>
         Job Class Agency App 
-        <nav className="YoA"><span>
-          <a href="/Account">Account</a>
+        <nav className="YoA">
+          <span>
+            <a href="/Account">Account</a>
+          </span>
+          <span>
+            <a href="https://discover.bestcolleges.com/">Best Colleges</a>
+          </span>
+          <span>
+            <a href="https://www.careerexplorer.com/assessments/"> 
+            ``Please Take The Test First`` </a>
           </span>
           </nav>
+          <h2><p> Put the title of the job from your 
+            assessment in the searchbar </p></h2>
         <Form cardsearch={callCard} id='cardsearch'></Form>
         <CardDisplay card={card}></CardDisplay>
         <div className="spano">
-        <Router>
+        {/* <Router> */}
         <footer>
         <nav>
-          <span>
+          {/* <span>
             <Link to={`/Userbase`}>Userbase</Link>
           </span>
           <span>
@@ -115,16 +123,16 @@ return (
           </span>
           <span>
             <Link to={`/Contact`}>Contact</Link>
-          </span>
+          </span> */}
         </nav>
-          </footer>
-          <Routes>
+          {/* <Routes>
             <Route path='Userbase' element={<Userbase />}/>
             <Route path='Merch' element={<Merch/>}/>
             <Route path='Clubs' element={<Clubs/>}/>
             <Route path='Contact' element={<Contact/>}/>
-          </Routes>
-        </Router>
+          </Routes> */}
+          </footer>
+        {/* </Router> */}
         </div>
       </Background>
     </div>
