@@ -8,10 +8,10 @@ import styled from 'styled-components';
 import CardDisplay from "./components/cardDisplay";
 import { getCard } from "./services/card-api";
 import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
-import {Clubs} from "./views/Clubs";
-import {Contact} from "./views/Contact";
-import {Userbase} from "./views/Userbase";
-import {Merch} from "./views/Merch";
+// import {Clubs} from "./views/Clubs";
+// import {Contact} from "./views/Contact";
+// import {Userbase} from "./views/Userbase";
+// import {Merch} from "./views/Merch";
 /*
 Objectives
 How to use Styled Components

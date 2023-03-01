@@ -8,7 +8,7 @@ class Clubs extends React.Component{
         return (
         <div>
             <p>this is a nightmare</p>
-            <Link to={`/`}>Clubs</Link>
+            {/* <Link to={`/`}>Clubs</Link> */}
         </div>
     )
     }
