@@ -101,7 +101,7 @@ return (
           </span>
           <span>
             <a href="https://www.careerexplorer.com/assessments/"> 
-            ``Please Take The Test First`` </a>
+            ``Please Take The Test First``</a>
           </span>
           </nav>
           <h2><p> Put the title of the job from your 

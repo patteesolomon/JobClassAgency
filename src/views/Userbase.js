@@ -6,4 +6,4 @@ const Userbase = () => {
   )
 }
 
-export default Userbase
+export default Userbase;
