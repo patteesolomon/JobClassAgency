@@ -1,16 +1,15 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import './App.css';
-//import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route, Link, NavLink} from "react-router-dom";
 import Form from "./components/Form";
 //import { EditCard } from './components/EditCard';
 //import Create from "./components/CreateCard";
 import styled from 'styled-components';
 import CardDisplay from "./components/cardDisplay";
 import { getCard } from "./services/card-api";
-import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 // import {Clubs} from "./views/Clubs";
-// import {Contact} from "./views/Contact";
-// import {Userbase} from "./views/Userbase";
+import {Contact} from "./views/Contact";
+import {Userbase} from "./views/Userbase";
 // import {Merch} from "./views/Merch";
 /*
 Objectives
@@ -22,11 +21,6 @@ const Background = styled.div`
   text-align: center;
 `
 
-const CardS = styled.div`
-  text-align: center;
-  display: flex;
-  justify-content: center;
-`
 function App() {
 
 const apiKey = 'v8BN36osB5u4ETQwIlPmVM6HHEN3FH2MDZYxvowc5q8qcT9VuoRjVrPJ';
@@ -91,11 +85,18 @@ const getPList = async (search, targetT, pageN) =>
 return (
     <div className="App">
       <Background>
-        Job Class Agency App 
+        <h1>Job Class Agency App(Under Construction)</h1>
+        <h2>Find your dream job and save it</h2>
+        <h3>Search for your dream job and hit the submit button</h3>
         <nav className="YoA">
-          <span>
-            <a href="/Account">Account</a>
-          </span>
+          <Router>
+                  <span><Link to="/">Home</Link></span>
+                  <span><Link to="/Account">Account</Link></span>
+                  <span><Link to ='/Clubs'>Clubs</Link></span>
+                  <span><Link to ='/'>Contact</Link></span>
+                  <span><Link to = '/'>Userbase</Link></span>
+                  <span><Link to ='/Merch'>Merch</Link></span>
+          </Router>
           <span>
             <a href="https://discover.bestcolleges.com/">Best Colleges</a>
           </span>
@@ -111,28 +112,8 @@ return (
         <div className="spano">
         {/* <Router> */}
         <footer>
-        <nav>
-          {/* <span>
-            <Link to={`/Userbase`}>Userbase</Link>
-          </span>
-          <span>
-            <Link to={`/Merch`}>Merch</Link>
-          </span>
-          <span>
-            <Link to={`/Clubs`}>Clubs</Link>
-          </span>
-          <span>
-            <Link to={`/Contact`}>Contact</Link>
-          </span> */}
-        </nav>
-          {/* <Routes>
-            <Route path='Userbase' element={<Userbase />}/>
-            <Route path='Merch' element={<Merch/>}/>
-            <Route path='Clubs' element={<Clubs/>}/>
-            <Route path='Contact' element={<Contact/>}/>
-          </Routes> */}
+        <nav></nav>
           </footer>
-        {/* </Router> */}
         </div>
       </Background>
     </div>

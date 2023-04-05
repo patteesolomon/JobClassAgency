@@ -7,6 +7,16 @@
     box-shadow:0 10px 10px rgb(30, 255, 0)rgb(30, 255, 0);
 }
 
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    background: rgba(35, 35, 35, 0.738);
+    box-shadow: 0 10px 10px rgb(30, 255, 0);
+}
+
 header::target-text{
     box-shadow: 0 10px 10px rgb(30, 255, 0);
 }

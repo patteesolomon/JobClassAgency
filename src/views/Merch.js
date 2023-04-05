@@ -9,7 +9,6 @@ export default function Merch() {
         <div>
             
             Hadar!!!
-            <Link to={nav('/')}>Merch</Link>
             
         </div>
     )
