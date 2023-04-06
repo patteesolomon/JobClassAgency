@@ -93,8 +93,8 @@ return (
                   <span><Link to="/">Home</Link></span>
                   <span><Link to="/Account">Account</Link></span>
                   <span><Link to ='/Clubs'>Clubs</Link></span>
-                  <span><Link to ='/'>Contact</Link></span>
-                  <span><Link to = '/'>Userbase</Link></span>
+                  <span><Link to ='/Contact'>Contact</Link></span>
+                  <span><Link to = '/Userbase'>Userbase</Link></span>
                   <span><Link to ='/Merch'>Merch</Link></span>
           </Router>
           <span>
